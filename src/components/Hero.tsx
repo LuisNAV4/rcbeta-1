@@ -51,7 +51,7 @@ const Hero = () => {
               isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}
           >
-            UEP El Relámpago del Catatumbo
+            U.E.P El Relámpago del Catatumbo
           </h1>
           
           <p 

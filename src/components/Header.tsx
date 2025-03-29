@@ -31,7 +31,7 @@ const Header = () => {
             "font-bold text-xl transition-colors",
             isScrolled ? "text-primary" : "text-white"
           )}>
-            UEP El Relámpago del Catatumbo
+            U.E.P El Relámpago del Catatumbo
           </span>
         </a>
 
