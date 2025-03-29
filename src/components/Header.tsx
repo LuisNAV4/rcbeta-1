@@ -31,13 +31,13 @@ const Header = () => {
             "font-bold text-xl transition-colors",
             isScrolled ? "text-primary" : "text-white"
           )}>
-            Colegio Excelencia
+            UEP El Relámpago del Catatumbo
           </span>
         </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          {['Inicio', 'Nosotros', 'Noticias', 'Asignaturas', 'Contacto'].map((item) => (
+          {['Inicio', 'Noticias', 'Asignaturas', 'Contacto'].map((item) => (
             <a 
               key={item} 
               href={`#${item.toLowerCase()}`}
@@ -69,7 +69,7 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-40 bg-white pt-20 pb-6 px-4 animate-fade-in md:hidden">
           <nav className="flex flex-col space-y-6">
-            {['Inicio', 'Nosotros', 'Noticias', 'Asignaturas', 'Contacto'].map((item) => (
+            {['Inicio', 'Noticias', 'Asignaturas', 'Contacto'].map((item) => (
               <a 
                 key={item} 
                 href={`#${item.toLowerCase()}`}

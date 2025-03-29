@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12">
           {/* About */}
           <div className="col-span-1 md:col-span-1 lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-6">Colegio Excelencia</h3>
+            <h3 className="text-2xl font-bold mb-6">UEP El Relámpago del Catatumbo</h3>
             <p className="mb-6 text-white/80">
               Formando líderes del mañana con valores, educación integral y excelencia académica en un ambiente inspirador desde 1985.
             </p>
@@ -42,7 +42,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6">Enlaces rápidos</h4>
             <ul className="space-y-4">
-              {['Inicio', 'Nosotros', 'Noticias', 'Asignaturas', 'Admisiones', 'Calendario'].map((item) => (
+              {['Inicio', 'Noticias', 'Asignaturas', 'Admisiones', 'Calendario'].map((item) => (
                 <li key={item}>
                   <a 
                     href={`#${item.toLowerCase()}`} 
@@ -69,7 +69,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail className="mr-3 h-5 w-5 text-primary shrink-0" />
-                <span className="text-white/80">info@colegioexcelencia.edu</span>
+                <span className="text-white/80">info@relampagocatatumbo.edu</span>
               </li>
             </ul>
           </div>
@@ -81,7 +81,7 @@ const Footer = () => {
         <div className="section-container py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-white/60 text-sm">
-              © {currentYear} Colegio Excelencia. Todos los derechos reservados.
+              © {currentYear} UEP El Relámpago del Catatumbo. Todos los derechos reservados.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-white/60 text-sm hover:text-white transition-colors duration-300">

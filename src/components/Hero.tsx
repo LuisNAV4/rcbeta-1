@@ -51,7 +51,7 @@ const Hero = () => {
               isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}
           >
-            Colegio Excelencia
+            UEP El Relámpago del Catatumbo
           </h1>
           
           <p 
@@ -70,10 +70,10 @@ const Hero = () => {
             )}
           >
             <a 
-              href="#nosotros" 
+              href="#noticias" 
               className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              Conócenos
+              Noticias
             </a>
             <a 
               href="#contacto" 
