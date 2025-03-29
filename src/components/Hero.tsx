@@ -35,7 +35,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-white px-4 sm:px-6">
-        <div className="text-center max-w-4xl mx-auto">
+        <div className="text-center max-w-4xl mx-auto mb-16">
           <span 
             className={cn(
               "inline-block px-3 py-1 text-sm font-medium bg-primary/90 backdrop-blur-sm rounded-full mb-6 transition-all duration-700",
@@ -85,8 +85,8 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scrolldown Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-white">
+      {/* Scrolldown Indicator - moved higher up */}
+      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-white">
         <span className="text-sm mb-2 opacity-80">Desplázate para explorar</span>
         <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center p-1">
           <div className="w-1 h-2 bg-white rounded-full animate-[slide-down_1.5s_ease-in-out_infinite]"></div>

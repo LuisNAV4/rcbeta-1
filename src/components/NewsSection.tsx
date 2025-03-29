@@ -60,9 +60,9 @@ const NewsSection = () => {
   }, []);
 
   return (
-    <section id="noticias" className="py-24 bg-secondary" ref={sectionRef}>
+    <section id="noticias" className="py-12 bg-secondary" ref={sectionRef}>
       <div className="section-container">
-        <div className={`text-center mb-16 transition-all duration-700 ${isInView ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
+        <div className={`text-center mb-12 transition-all duration-700 ${isInView ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
           <h2 className="section-title">Noticias y Eventos</h2>
           <p className="section-subtitle">Mantente informado sobre los últimos acontecimientos en nuestra institución</p>
         </div>
