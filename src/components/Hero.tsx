@@ -84,14 +84,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
-      {/* Scrolldown Indicator - moved higher up */}
-      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-white">
-        <span className="text-sm mb-2 opacity-80">Desplázate para explorar</span>
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center p-1">
-          <div className="w-1 h-2 bg-white rounded-full animate-[slide-down_1.5s_ease-in-out_infinite]"></div>
-        </div>
-      </div>
     </section>
   );
 };
