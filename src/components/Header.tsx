@@ -1,7 +1,8 @@
 
 import { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
-import { Menu, X } from 'lucide-react';
+import { Menu, X, LogIn } from 'lucide-react';
+import { Button } from "./ui/button";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -49,6 +50,20 @@ const Header = () => {
               {item}
             </a>
           ))}
+          {/* Login Button */}
+          <Button
+            variant="outline"
+            size="sm"
+            className={cn(
+              "flex items-center gap-2 transition-all",
+              isScrolled 
+                ? "bg-primary text-white hover:bg-primary/90 border-primary" 
+                : "bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm border-white/30"
+            )}
+          >
+            <LogIn className="h-4 w-4" />
+            Inicio de sesión
+          </Button>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -79,6 +94,10 @@ const Header = () => {
                 {item}
               </a>
             ))}
+            <Button className="flex items-center justify-center gap-2 w-full">
+              <LogIn className="h-4 w-4" />
+              Inicio de sesión
+            </Button>
           </nav>
         </div>
       )}
