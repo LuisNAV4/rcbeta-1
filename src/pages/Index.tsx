@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 
 const EnrollSection = () => {
   return (
-    <section className="bg-primary/10 py-12" id="Inscribir">
+    <section className="bg-primary/10 py-12" id="inscribir">
       <div className="section-container py-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">¡Inscribe a tu hijo hoy mismo!</h2>

@@ -17,7 +17,15 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+    document.body.style.overflow = isMobileMenuOpen ? 'unset' : 'hidden'; // Control del scroll
+  };
+
+  const handleMenuItemClick = () => {
+    setIsMobileMenuOpen(false); // Cerrar el menú
+    document.body.style.overflow = 'unset'; // Habilitar scroll al seleccionar una opción
+  };
 
   return (
     <header 
@@ -68,12 +76,12 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden p-2"
+          className="md:hidden p-2 relative z-50"
           onClick={toggleMobileMenu}
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? (
-            <X className={isScrolled ? "text-foreground" : "text-white"} />
+            <X className={isScrolled ? "text-foreground" : "text-black"} />
           ) : (
             <Menu className={isScrolled ? "text-foreground" : "text-white"} />
           )}
@@ -82,14 +90,14 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-white pt-20 pb-6 px-4 animate-fade-in md:hidden">
+         <div className="fixed inset-0 z-40 bg-white pt-20 pb-6 px-4 animate-fade-in md:hidden">
           <nav className="flex flex-col space-y-6">
             {['Inicio', 'Noticias', 'Asignaturas', 'Contacto'].map((item) => (
               <a 
                 key={item} 
                 href={`#${item.toLowerCase()}`}
                 className="text-foreground text-lg font-medium py-2 border-b border-muted"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={handleMenuItemClick} // Cerrar el menú y habilitar scroll
               >
                 {item}
               </a>
@@ -100,6 +108,7 @@ const Header = () => {
             </Button>
           </nav>
         </div>
+     
       )}
     </header>
   );
