@@ -1,6 +1,8 @@
 
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import backgroundImage from "../../public/Colegio RC FONDO.png";
+
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -23,7 +25,8 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center transform transition-transform duration-700"
         style={{
-          backgroundImage: "url('/public/Colegio RC FONDO.png')",
+          
+          backgroundImage: `url(${backgroundImage})`,
           transform: `translateY(${scrollY * 0.2}px)`,
           opacity: isLoaded ? 1 : 0,
           transition: 'opacity 0.8s ease-in-out, transform 0.3s ease-out'
