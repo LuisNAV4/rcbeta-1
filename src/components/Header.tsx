@@ -36,12 +36,11 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="/" className="flex items-center">
-          <span className={cn(
-            "font-bold text-xl transition-colors",
-            isScrolled ? "text-primary" : "text-white"
-          )}>
-            U.E.P El Relámpago del Catatumbo
-          </span>
+          <img 
+            src="/public/logo-rc-png.ico" 
+            alt="Logo Colegio El Relámpago del Catatumbo" 
+            className="h-10 w-auto"
+          />
         </a>
 
         {/* Desktop Navigation */}
@@ -108,7 +107,6 @@ const Header = () => {
             </Button>
           </nav>
         </div>
-     
       )}
     </header>
   );
