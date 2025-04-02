@@ -34,10 +34,16 @@ const Header = () => {
         isScrolled ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-transparent"
       )}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="/" className="flex items-center">
+        
+          <img 
+            src="./src/images/logo-rc-png.ico" 
+            alt="Logo Colegio El Relámpago del Catatumbo" 
+            className="h-12 w-auto transition-all duration-300 ease-in-out hover:scale-125 "
+          />
           <span className={cn(
-            "font-bold text-xl transition-colors",
+            "font-bold text-xl transition-colors padding-right-2 duration-300 ease-in-out",
             isScrolled ? "text-primary" : "text-white"
           )}>
             U.E.P El Relámpago del Catatumbo
@@ -46,7 +52,7 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          {['Inicio', 'Noticias', 'Asignaturas', 'Contacto'].map((item) => (
+          {['Inicio', 'Noticias','Inscripciones', 'Asignaturas', 'Contacto'].map((item) => (
             <a 
               key={item} 
               href={`#${item.toLowerCase()}`}

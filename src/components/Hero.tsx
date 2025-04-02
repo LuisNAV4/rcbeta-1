@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import backgroundImage from "../../public/Colegio RC FONDO.png";
+import backgroundImage from "/src/images/Colegio RC FONDO.png";
 
 
 const Hero = () => {
@@ -82,9 +82,9 @@ const Hero = () => {
               Noticias
             </a>
             <a 
-              href="#Inscribir" 
+              href="#inscripciones" 
               className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl" >
-              Inscribir
+              Inscripciones
               </a>
             <a 
               href="#contacto" 

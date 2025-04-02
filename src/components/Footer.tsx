@@ -24,11 +24,7 @@ const Footer = () => {
               Formando líderes del mañana con valores, educación integral y excelencia académica en un ambiente inspirador.
             </p>
             <div className="flex space-x-4">
-              
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors duration-300">
-                <MessageCircle size={18} />
-              </a>
-              <a href="https://www.facebook.com/colegiorcoficial" 
+            <a href="https://www.facebook.com/colegiorcoficial" 
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -44,6 +40,11 @@ const Footer = () => {
               <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors duration-300">
                 <MapPin size={18} />
               </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors duration-300">
+                <MessageCircle size={18} />
+              </a>
+
+
             </div>
           </div>
           
