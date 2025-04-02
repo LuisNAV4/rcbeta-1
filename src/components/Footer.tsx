@@ -74,15 +74,15 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="flex items-start text-white/80">
-                <MapPin className="mr-3 h-5 w-5 text-primary shrink-0 mt-0.5" />
+                <MapPin className="mr-3 h-5 w-5 text-white shrink-0 mt-0.5" />
                 <span className="text-white/80">Av. Principal 1234, Ciudad</span></a>
               </li>
               <li className="flex items-center">
-                <Phone className="mr-3 h-5 w-5 text-primary shrink-0" />
+                <Phone className="mr-3 h-5 w-5 text-white shrink-0" />
                 <span className="text-white/80">+123 456 7890</span>
               </li>
               <li className="flex items-center">
-                <Mail className="mr-3 h-5 w-5 text-primary shrink-0" />
+                <Mail className="mr-3 h-5 w-5 text-white shrink-0" />
                 <span className="text-white/80">info@relampagocatatumbo.edu</span>
               </li>
             </ul>

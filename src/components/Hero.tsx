@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import backgroundImage from "/src/images/Colegio RC FONDO.png";
+import backgroundImage from "@/images/Colegio RC FONDO.png";
 
 
 const Hero = () => {
