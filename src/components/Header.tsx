@@ -39,7 +39,7 @@ const Header = () => {
           <img 
             src="/public/logo-rc-png.ico" 
             alt="Logo Colegio El Relámpago del Catatumbo" 
-            className="h-10 w-auto"
+            className="h-10 w-auto transition-all duration-300 ease-in-out hover:scale-110"
           />
         </a>
 
