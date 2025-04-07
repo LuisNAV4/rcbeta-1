@@ -90,7 +90,7 @@ const SubjectsSection = () => {
   }, []);
 
   return (
-    <section id="asignaturas" className="py-12 bg-white" ref={sectionRef}>
+    <section id="asignaturas" className="bg-gradient-to-r from-primary/0 to-primary/10" ref={sectionRef}>
       <div className="section-container">
         <div className={`text-center mb-12 transition-all duration-700 ${isInView ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
           <h2 className="section-title">Nuestras Asignaturas</h2>
