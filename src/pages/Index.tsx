@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -11,7 +10,7 @@ import { CalendarPlus, GraduationCap, BookOpen, Users, CheckCircle } from 'lucid
 
 const EnrollSection = () => {
   return (
-    <section className="relative py-16 overflow-hidden bg-white" id="inscripciones">
+    <section className="relative py-16 overflow-hidden bg-gradient-to-r from-primary/5 to-primary/20" id="inscripciones">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMzMjkxRjgiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0aDR2MWgtNHYtMXptMC00aDR2MWgtNHYtMXptMC00aDR2MWgtNHYtMXptMC00aDR2MWgtNHYtMXptMC00aDR2MWgtNHYtMXptLTEyIDIwaDR2MWgtNHYtMXptMC00aDR2MWgtNHYtMXptMC00aDR2MWgtNHYtMXptMC00aDR2MWgtNHYtMXptMC00aDR2MWgtNHYtMXptLTEyIDIwaDR2MWgtNHYtMXptMC00aDR2MWgtNHYtMXptMC00aDR2MWgtNHYtMXptMC00aDR2MWgtNHYtMXptMC00aDR2MWgtNHYtMXoiLz48L2c+PC9nPjwvc3ZnPg==')]"></div>
       
       <div className="section-container relative">
