@@ -37,7 +37,7 @@ const Header = () => {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
 <a href="/" className="flex items-center">
   <img 
-    src="./src/images/logo-rc-png.ico" 
+    src="@/images/logo-rc-png.ico"
     alt="Logo Colegio El Relámpago del Catatumbo" 
     className="h-12 w-auto transition-all duration-300 ease-in-out hover:scale-125"
   />
