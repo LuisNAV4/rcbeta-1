@@ -79,7 +79,7 @@ const EnrollSection = () => {
             </ul>
             
             <div className="text-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg shadow-md hover:shadow-xl transition-all duration-300 animate-pulse">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg shadow-md hover:shadow-xl transition-all duration-300">
                 <CalendarPlus className="mr-2 h-5 w-5" />
                 Iniciar Proceso de Inscripción
               </Button>
