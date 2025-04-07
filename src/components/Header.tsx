@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
 import { Menu, X, LogIn } from 'lucide-react';
 import { Button } from "./ui/button";
+import logoImage from "../images/logo-rc-png.ico";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,19 +36,13 @@ const Header = () => {
       )}
     >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-<a href="/" className="flex items-center">
-  <img 
-    src="@/images/logo-rc-png.ico"
-    alt="Logo Colegio El Relámpago del Catatumbo" 
-    className="h-12 w-auto transition-all duration-300 ease-in-out hover:scale-125"
-  />
-  <span className={cn(
-    "font-bold text-xl transition-colors padding-right-2 duration-300 ease-in-out",
-    isScrolled ? "text-primary" : "text-white"
-  )}>
-    U.E.P El Relámpago del Catatumbo
-  </span>
-</a>
+          <a href="/" className="flex items-center">
+            <img 
+              src={logoImage}
+              alt="Logo Colegio El Relámpago del Catatumbo" 
+              className="h-12 w-auto transition-all duration-300 ease-in-out hover:scale-125"
+            />
+          </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
