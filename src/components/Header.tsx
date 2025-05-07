@@ -36,13 +36,13 @@ const Header = () => {
       )}
     >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <a href="/" className="flex items-center text-foreground font-bold text-lg space-x-2 text-white" >
+          <a href="/" className={cn("flex items-center text-foreground font-bold text-lg space-x-2 text-white", isScrolled ? "text-foreground" : "text-white")}>
             <img 
               src={logoImage}
               alt="Logo Colegio RC" 
               className="h-12 w-auto transition-all duration-300 ease-in-out hover:scale-125"
             />
-            I.U.P El Relámpago del Catatumbo
+            U.E.P El Relámpago del Catatumbo
           </a>
 
         {/* Desktop Navigation */}

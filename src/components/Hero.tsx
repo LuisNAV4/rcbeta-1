@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import backgroundImage from "@/images/Colegio RC FONDO.png";
+//import backgroundImage from "@/images/Colegio RC FONDO.png";
 
 
 const Hero = () => {
@@ -23,13 +23,12 @@ const Hero = () => {
     <section className="relative h-screen w-full overflow-hidden" id="inicio">
       {/* Background Image with Parallax Effect */}
       <div 
-        className="absolute inset-0 bg-cover bg-center transform transition-transform duration-700"
+        className="absolute inset-0 bg-cover bg-center"
         style={{
           
-          backgroundImage: `url(${backgroundImage})`,
-          transform: `translateY(${scrollY * 0.2}px)`,
-          opacity: isLoaded ? 1 : 0,
-          transition: 'opacity 0.8s ease-in-out, transform 0.3s ease-out'
+          //backgroundImage: `url(${backgroundImage})`,
+          backgroundColor: "#00FF00",
+          //opacity: isLoaded ? 1 : 0,
         }}
       >
         {/* Overlay */}
