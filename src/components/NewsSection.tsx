@@ -60,7 +60,7 @@ const NewsSection = () => {
   }, []);
 
   return (
-    <section id="noticias" className="bg-gradient-to-r from-primary/0 to-primary/10" ref={sectionRef}>
+    <section id="noticias" className="bg-transparent" ref={sectionRef}>
       <div className="section-container">
         <div className={`text-center mb-12 transition-all duration-700 ${isInView ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
           <h2 className="section-title">Noticias y Eventos</h2>
@@ -69,14 +69,18 @@ const NewsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {newsItems.map((item, index) => (
-            <NewsCard
-              key={item.id}
-              image={item.image}
-              title={item.title}
-              date={item.date}
-              summary={item.summary}
-              index={index}
-            />
+            <div 
+              key={item.id} 
+              className="border-2 border-amber-500 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all"
+            >
+              <NewsCard
+                image={item.image}
+                title={item.title}
+                date={item.date}
+                summary={item.summary}
+                index={index}
+              />
+            </div>
           ))}
         </div>
 

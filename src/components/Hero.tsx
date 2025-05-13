@@ -21,10 +21,10 @@ const Hero = () => {
     <section className="relative h-screen w-full overflow-hidden" id="inicio">
       {/* Background Gradient from Royal Blue to White */}
       <div 
-        className="absolute inset-0 bg-gradient-to-b from-primary via-primary/50 to-white"
+        className="absolute inset-0 bg-gradient-to-b from-primary via-primary/30 to-transparent"
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
       </div>
 
       {/* Content */}
