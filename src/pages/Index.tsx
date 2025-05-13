@@ -11,8 +11,8 @@ import { CalendarPlus, GraduationCap, BookOpen, Users, CheckCircle } from 'lucid
 
 const EnrollSection = () => {
   return (
-    <section className="bg-transparent" id="inscripciones">
-      <div className="section-container relative">
+    <section className="bg-transparent relative" id="inscripciones">
+      <div className="section-container relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <Badge variant="outline" className="mb-2 py-1.5 px-4 text-primary bg-primary/10 border-primary/20">
             <CalendarPlus className="h-3.5 w-3.5 mr-1" />

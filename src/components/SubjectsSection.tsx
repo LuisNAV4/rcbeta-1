@@ -90,8 +90,8 @@ const SubjectsSection = () => {
   }, []);
 
   return (
-    <section id="asignaturas" className="bg-gradient-to-r from-primary/0 to-primary/10" ref={sectionRef}>
-      <div className="section-container">
+    <section id="asignaturas" className="bg-gradient-to-r from-primary/0 to-primary/10 relative" ref={sectionRef}>
+      <div className="section-container relative z-10">
         <div className={`text-center mb-12 transition-all duration-700 ${isInView ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
           <h2 className="section-title">Nuestras Asignaturas</h2>
           <p className="section-subtitle">Ofrecemos un plan de estudios integral para el desarrollo completo de nuestros estudiantes</p>

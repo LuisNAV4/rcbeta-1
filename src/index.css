@@ -83,18 +83,24 @@
     overflow-x: hidden;
   }
   
-  body::before {
+  /* Remove the existing body::before style */
+  
+  /* Add gradient lines to specific sections */
+  #noticias::before,
+  #inscripciones::before,
+  #asignaturas::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 50%;
     left: -100%;
     right: -100%;
-    height: 15px;
-    background: linear-gradient(100deg, #FF9D00 0%, #FFD700 100%);
-    transform: rotate(10deg);
+    height: 12px;
+    background: linear-gradient(95deg, #FF9D00 0%, #FFD700 100%);
+    transform: translateY(-50%) rotate(5deg);
     transform-origin: center;
-    z-index: 100;
-    margin-top: 30vh;
+    z-index: 1;
+    opacity: 0.7;
+    pointer-events: none;
   }
   
   h1, h2, h3, h4, h5, h6 {
