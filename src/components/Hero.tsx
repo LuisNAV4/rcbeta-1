@@ -1,8 +1,6 @@
 
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-//import backgroundImage from "@/images/Colegio RC FONDO.png";
-
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -21,15 +19,9 @@ const Hero = () => {
 
   return (
     <section className="relative h-screen w-full overflow-hidden" id="inicio">
-      {/* Background Image with Parallax Effect */}
+      {/* Background Gradient from Royal Blue to White */}
       <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          
-          //backgroundImage: `url(${backgroundImage})`,
-          backgroundColor: "#00FF00",
-          //opacity: isLoaded ? 1 : 0,
-        }}
+        className="absolute inset-0 bg-gradient-to-b from-primary via-primary/50 to-white"
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/40"></div>
@@ -71,9 +63,6 @@ const Hero = () => {
               isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}
           > 
-
-
-
             <a 
               href="#noticias" 
               className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
@@ -84,7 +73,7 @@ const Hero = () => {
               href="#inscripciones" 
               className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl" >
               Inscripciones
-              </a>
+            </a>
             <a 
               href="#contacto" 
               className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 border border-white/30"

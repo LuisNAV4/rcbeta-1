@@ -32,11 +32,13 @@ const Header = () => {
     <header 
       className={cn(
         "fixed w-full top-0 z-50 transition-all duration-300 ease-in-out py-4 px-4 md:px-8",
-        isScrolled ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-transparent"
+        isScrolled 
+          ? "bg-white/95 backdrop-blur-md shadow-sm" 
+          : "bg-gradient-to-b from-primary via-primary to-orange-500"
       )}
     >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <a href="/" className={cn("flex items-center text-foreground font-bold text-lg space-x-2 text-white", isScrolled ? "text-foreground" : "text-white")}>
+          <a href="/inicio" className={cn("flex items-center text-foreground font-bold text-lg space-x-2", isScrolled ? "text-foreground" : "text-white")}>
             <img 
               src={logoImage}
               alt="Logo Colegio RC" 
@@ -52,7 +54,7 @@ const Header = () => {
               key={item} 
               href={`#${item.toLowerCase()}`}
               className={cn(
-                "font-medium transition-all duration-300 ease-in-out relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:origin-center after:scale-x-0 after:bg-primary after:transition-transform hover:after:scale-x-100",
+                "font-medium transition-all duration-300 ease-in-out relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:origin-center after:scale-x-0 after:bg-white after:transition-transform hover:after:scale-x-100",
                 isScrolled ? "text-foreground" : "text-white"
               )}
             >
@@ -67,7 +69,7 @@ const Header = () => {
               "flex items-center gap-2 transition-all",
               isScrolled 
                 ? "bg-primary text-white hover:bg-primary/90 border-primary" 
-                : "bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm border-white/30"
+                : "bg-orange-500 text-white hover:bg-orange-600 backdrop-blur-sm border-orange-400"
             )}
           >
             <LogIn className="h-4 w-4" />
@@ -82,7 +84,7 @@ const Header = () => {
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? (
-            <X className={isScrolled ? "text-foreground" : "text-black"} />
+            <X className={isScrolled ? "text-foreground" : "text-white"} />
           ) : (
             <Menu className={isScrolled ? "text-foreground" : "text-white"} />
           )}
@@ -91,19 +93,19 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-         <div className="fixed inset-0 z-40 bg-white pt-20 pb-6 px-4 animate-fade-in md:hidden">
+         <div className="fixed inset-0 z-40 bg-gradient-to-b from-primary to-orange-500 pt-20 pb-6 px-4 animate-fade-in md:hidden">
           <nav className="flex flex-col space-y-6">
             {['Inicio', 'Noticias', 'Asignaturas', 'Contacto'].map((item) => (
               <a 
                 key={item} 
                 href={`#${item.toLowerCase()}`}
-                className="text-foreground text-lg font-medium py-2 border-b border-muted"
+                className="text-white text-lg font-medium py-2 border-b border-white/30"
                 onClick={handleMenuItemClick} // Cerrar el menú y habilitar scroll
               >
                 {item}
               </a>
             ))}
-            <Button className="flex items-center justify-center gap-2 w-full">
+            <Button className="flex items-center justify-center gap-2 w-full bg-orange-500 hover:bg-orange-600 text-white">
               <LogIn className="h-4 w-4" />
               Inicio de sesión
             </Button>

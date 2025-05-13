@@ -13,7 +13,7 @@ interface NewsCardProps {
 const NewsCard = ({ image, title, date, summary, index }: NewsCardProps) => {
   return (
     <div 
-      className="hover-card bg-white rounded-xl overflow-hidden shadow-md animate-fade-in opacity-0"
+      className="hover-card bg-white rounded-xl overflow-hidden shadow-md animate-fade-in opacity-0 border-2 border-orange-500"
       style={{ 
         animationDelay: `${index * 100}ms`,
         animationFillMode: 'forwards'
