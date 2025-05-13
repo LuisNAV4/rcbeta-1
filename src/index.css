@@ -77,8 +77,9 @@
   body {
     @apply bg-background text-foreground font-sans;
     font-feature-settings: "rlig" 1, "calt" 1;
-    background: linear-gradient(180deg, rgba(35, 70, 195, 0.08) 0%, rgba(255, 255, 255, 0.7) 100%);
+    background: linear-gradient(180deg, rgba(35, 70, 195, 0.15) 0%, rgba(255, 255, 255, 0.85) 100%);
     position: relative;
+    min-height: 100vh;
   }
   
   body::before {
@@ -87,7 +88,7 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 5px;
+    height: 8px;
     background: linear-gradient(90deg, #FF9D00 0%, #FFD700 100%);
     z-index: 100;
   }

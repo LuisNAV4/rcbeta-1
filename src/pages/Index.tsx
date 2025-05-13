@@ -54,7 +54,7 @@ const EnrollSection = () => {
         </div>
         
         <div className="max-w-2xl mx-auto">
-          <div className="bg-white p-8 rounded-xl shadow-lg border border-primary/20">
+          <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-amber-500">
             <h3 className="text-xl font-bold mb-4 text-center">Proceso de Inscripción</h3>
             
             <ul className="space-y-4 mb-6">

@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
 import { Menu, X, LogIn } from 'lucide-react';
@@ -38,7 +39,7 @@ const Header = () => {
     >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <a 
-            href="/rcbeta-1/inicio" 
+            href="/inicio" 
             className={cn("flex items-center text-foreground font-bold text-lg space-x-2", isScrolled ? "text-foreground" : "text-white")}
           >
             <img 
@@ -97,7 +98,7 @@ const Header = () => {
       {isMobileMenuOpen && (
          <div className="fixed inset-0 z-40 bg-gradient-to-b from-primary to-orange-500 pt-20 pb-6 px-4 animate-fade-in md:hidden">
           <nav className="flex flex-col space-y-6">
-            {['Inicio', 'Noticias', 'Asignaturas', 'Contacto'].map((item) => (
+            {['Inicio', 'Noticias', 'Inscripciones', 'Asignaturas', 'Contacto'].map((item) => (
               <a 
                 key={item} 
                 href={`#${item.toLowerCase()}`}
