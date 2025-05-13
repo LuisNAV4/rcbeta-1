@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
 import { Menu, X, LogIn } from 'lucide-react';
@@ -38,7 +37,10 @@ const Header = () => {
       )}
     >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <a href="/inicio" className={cn("flex items-center text-foreground font-bold text-lg space-x-2", isScrolled ? "text-foreground" : "text-white")}>
+          <a 
+            href="/rcbeta-1/inicio" 
+            className={cn("flex items-center text-foreground font-bold text-lg space-x-2", isScrolled ? "text-foreground" : "text-white")}
+          >
             <img 
               src={logoImage}
               alt="Logo Colegio RC" 
