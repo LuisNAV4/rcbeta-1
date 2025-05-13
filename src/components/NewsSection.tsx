@@ -71,7 +71,7 @@ const NewsSection = () => {
           {newsItems.map((item, index) => (
             <div 
               key={item.id} 
-              className="border-2 border-amber-500 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all"
+              className="border border-primary/20 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all"
             >
               <NewsCard
                 image={item.image}
