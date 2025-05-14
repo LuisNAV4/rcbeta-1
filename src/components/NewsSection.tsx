@@ -1,7 +1,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import NewsCard from "./NewsCard";
-import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const newsItems = [
   {
@@ -61,18 +60,11 @@ const NewsSection = () => {
   }, []);
 
   return (
-    <section id="noticias" className="section-with-diagonal bg-transparent relative" ref={sectionRef}>
+    <section id="noticias" className="bg-transparent relative" ref={sectionRef}>
       <div className="section-container relative z-10">
-        <div className="flex items-center justify-between mb-8">
-          <h2 className="text-3xl font-bold text-primary">Noticias</h2>
-          <div className="flex gap-2">
-            <button className="bg-gray-200 hover:bg-gray-300 p-2 rounded-full">
-              <ArrowLeft size={18} />
-            </button>
-            <button className="bg-gray-200 hover:bg-gray-300 p-2 rounded-full">
-              <ArrowRight size={18} />
-            </button>
-          </div>
+        <div className={`text-center mb-12 transition-all duration-700 ${isInView ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
+          <h2 className="section-title">Noticias y Eventos</h2>
+          <p className="section-subtitle">Mantente informado sobre los últimos acontecimientos en nuestra institución</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -92,7 +84,7 @@ const NewsSection = () => {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
+        <div className={`mt-16 text-center transition-all duration-700 delay-500 ${isInView ? 'opacity-100' : 'opacity-0'}`}>
           <a 
             href="#" 
             className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-medium rounded-lg shadow hover:shadow-md transition-all duration-300"

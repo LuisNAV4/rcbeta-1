@@ -1,42 +1,52 @@
-
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CalendarPlus, GraduationCap, BookOpen, Users, CheckCircle } from 'lucide-react';
 
 const EnrollSection = () => {
   return (
-    <section className="section-with-diagonal bg-transparent relative" id="inscripciones">
+    <section className="bg-transparent relative" id="inscripciones">
       <div className="section-container relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-primary text-white p-8 rounded-lg">
-            <h2 className="text-3xl font-bold mb-4">PREINSCRIPCIONES 2025-2026</h2>
-            <p className="mb-6">
-              Abre las puertas a un futuro brillante con una educación de calidad en 
-              U.E.P El Relámpago del Catatumbo.
-            </p>
-            <Button
-              size="lg"
-              className="bg-white text-primary hover:bg-gray-100 px-8 py-6 text-lg shadow-md hover:shadow-xl transition-all duration-300"
-            >
-              Más Información
-            </Button>
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <Badge variant="outline" className="mb-2 py-1.5 px-4 text-primary bg-primary/10 border-primary/20">
+            <CalendarPlus className="h-3.5 w-3.5 mr-1" />
+            Período de inscripciones abierto
+          </Badge>
+          <h2 className="text-4xl py-2 font-bold mb-4 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+            ¡Asegura el futuro de tu hijo hoy!
+          </h2>
+          <p className="text-lg text-gray-700 mb-8">
+            Abre las puertas a un futuro brillante con una educación de calidad en 
+            U.E.P El Relámpago del Catatumbo.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+          <div className="bg-white p-6 rounded-xl shadow-md border border-primary/10 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+              <GraduationCap className="h-6 w-6 text-primary" />
+            </div>
+            <h3 className="text-xl font-bold mb-2 text-center">Excelencia Académica</h3>
+            <p className="text-gray-600 text-center">Nuestro programa educativo está diseñado para fomentar el pensamiento crítico y el desarrollo integral.</p>
           </div>
           
-          <div className="bg-red-600 text-white p-8 rounded-lg">
-            <h2 className="text-3xl font-bold mb-4">INGRESA A TU CLASE</h2>
-            <p className="mb-6">
-              Accede a tu portal educativo para consultar tus clases, horarios, tareas y recursos.
-            </p>
-            <Button
-              size="lg"
-              className="bg-white text-red-600 hover:bg-gray-100 px-8 py-6 text-lg shadow-md hover:shadow-xl transition-all duration-300"
-            >
-              Iniciar Sesión
-            </Button>
+          <div className="bg-white p-6 rounded-xl shadow-md border border-primary/10 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+              <BookOpen className="h-6 w-6 text-primary" />
+            </div>
+            <h3 className="text-xl font-bold mb-2 text-center">Metodología Innovadora</h3>
+            <p className="text-gray-600 text-center">Combinamos métodos tradicionales con las últimas innovaciones educativas para un aprendizaje efectivo.</p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-xl shadow-md border border-primary/10 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+              <Users className="h-6 w-6 text-primary" />
+            </div>
+            <h3 className="text-xl font-bold mb-2 text-center">Comunidad Educativa</h3>
+            <p className="text-gray-600 text-center">Formamos una comunidad donde estudiantes, padres y educadores trabajan juntos por el éxito académico.</p>
           </div>
         </div>
         
-        <div className="max-w-2xl mx-auto mt-16">
+        <div className="max-w-2xl mx-auto">
           <div className="bg-white p-8 rounded-xl shadow-lg border border-primary/20">
             <h3 className="text-xl font-bold mb-4 text-center">Proceso de Inscripción</h3>
             
@@ -62,7 +72,7 @@ const EnrollSection = () => {
             <div className="text-center">
               <Button
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg shadow-md hover:shadow-xl transition-all duration-300"
+                className="bg-primary hover:bg-primary/90 text-white px-4 py-3 md:px-8 md:py-6 text-base md:text-lg shadow-md hover:shadow-xl transition-all duration-300 w-full md:w-auto"
               >
                 <CalendarPlus className="mr-2 h-5 w-5" />
                 Iniciar Proceso de Inscripción

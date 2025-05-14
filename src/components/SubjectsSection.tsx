@@ -40,8 +40,8 @@ const subjects = [
   {
     id: 5,
     icon: GraduationCap,
-    title: "Programa del Diploma (BI)",
-    description: "Preparación para el Bachillerato Internacional con énfasis en el pensamiento crítico y la investigación académica."
+    title: "Inglés",
+    description: "Adquisición de habilidades de comunicación en inglés como segunda lengua para preparar a los estudiantes para un mundo globalizado."
   },
   {
     id: 6,
@@ -58,8 +58,8 @@ const subjects = [
   {
     id: 8,
     icon: LineChart,
-    title: "Robótica",
-    description: "Desarrollo de habilidades en programación, diseño y construcción de robots para resolver problemas tecnológicos."
+    title: "Educación Física",
+    description: "Desarrollo de habilidades motrices, trabajo en equipo y hábitos de vida saludable a través de actividades físicas y deportivas."
   }
 ];
 
@@ -90,10 +90,10 @@ const SubjectsSection = () => {
   }, []);
 
   return (
-    <section id="asignaturas" className="section-with-diagonal bg-transparent relative" ref={sectionRef}>
+    <section id="asignaturas" className="bg-gradient-to-r from-primary/0 to-primary/10 relative" ref={sectionRef}>
       <div className="section-container relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="section-title">Programas Académicos</h2>
+        <div className={`text-center mb-12 transition-all duration-700 ${isInView ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
+          <h2 className="section-title">Nuestras Asignaturas</h2>
           <p className="section-subtitle">Ofrecemos un plan de estudios integral para el desarrollo completo de nuestros estudiantes</p>
         </div>
 
@@ -109,30 +109,12 @@ const SubjectsSection = () => {
           ))}
         </div>
 
-        <div className="mt-16 flex flex-wrap gap-4 justify-center">
+        <div className={`mt-16 text-center transition-all duration-700 delay-500 ${isInView ? 'opacity-100' : 'opacity-0'}`}>
           <a 
             href="#" 
             className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
           >
-            Primaria
-          </a>
-          <a 
-            href="#" 
-            className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            Media
-          </a>
-          <a 
-            href="#" 
-            className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            Comunicados y Horarios
-          </a>
-          <a 
-            href="#" 
-            className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            Programa del Diploma (BI)
+            Conoce nuestro plan de estudios completo
           </a>
         </div>
       </div>
