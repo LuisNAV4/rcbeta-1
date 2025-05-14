@@ -82,7 +82,26 @@
     background: linear-gradient(180deg, rgba(35, 70, 195, 0.15) 0%, rgba(255, 255, 255, 0.85) 100%);
     overflow-x: hidden;
   }
- 
+  
+  /* Orange-gold diagonal line */
+  .section-with-diagonal {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .section-with-diagonal::before {
+    content: "";
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 10px;
+    background-color: rgba(243, 156, 18, 0.7); /* Orange-gold with transparency */
+    transform: rotate(95deg);
+    transform-origin: top left;
+    z-index: 1;
+    box-shadow: 0px 0px 15px rgba(243, 156, 18, 0.5);
+  }
   
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold tracking-tight;

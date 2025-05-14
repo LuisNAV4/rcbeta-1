@@ -20,13 +20,24 @@ const Header = () => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-    document.body.style.overflow = isMobileMenuOpen ? 'unset' : 'hidden'; // Control del scroll
+    document.body.style.overflow = isMobileMenuOpen ? 'unset' : 'hidden';
   };
 
   const handleMenuItemClick = () => {
-    setIsMobileMenuOpen(false); // Cerrar el menú
-    document.body.style.overflow = 'unset'; // Habilitar scroll al seleccionar una opción
+    setIsMobileMenuOpen(false);
+    document.body.style.overflow = 'unset';
   };
+
+  const menuItems = [
+    { label: "Inicio", href: "#inicio" },
+    { label: "Primaria", href: "#" },
+    { label: "Media", href: "#" },
+    { label: "Comunicados y Horarios", href: "#" },
+    { label: "Programa del Diploma (BI)", href: "#" },
+    { label: "Robótica", href: "#" },
+    { label: "Profesores", href: "#" },
+    { label: "Más Información", href: "#" },
+  ];
 
   return (
     <header 
@@ -47,38 +58,39 @@ const Header = () => {
               alt="Logo Colegio RC" 
               className="h-12 w-auto transition-all duration-300 ease-in-out hover:scale-125"
             />
-            U.E.P El Relámpago del Catatumbo
+            <span className="hidden md:inline">U.E.P El Relámpago del Catatumbo</span>
           </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
-          {['Inicio', 'Noticias','Inscripciones', 'Asignaturas', 'Contacto'].map((item) => (
+        <nav className="hidden md:flex items-center space-x-6 overflow-x-auto">
+          {menuItems.map((item) => (
             <a 
-              key={item} 
-              href={`#${item.toLowerCase()}`}
+              key={item.label} 
+              href={item.href}
               className={cn(
-                "font-medium transition-all duration-300 ease-in-out relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:origin-center after:scale-x-0 after:bg-white after:transition-transform hover:after:scale-x-100",
+                "font-medium whitespace-nowrap transition-all duration-300 ease-in-out relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:origin-center after:scale-x-0 after:bg-white after:transition-transform hover:after:scale-x-100",
                 isScrolled ? "text-foreground" : "text-white"
               )}
             >
-              {item}
+              {item.label}
             </a>
           ))}
-          {/* Login Button */}
-          <Button
-            variant="outline"
-            size="sm"
-            className={cn(
-              "flex items-center gap-2 transition-all",
-              isScrolled 
-                ? "bg-primary text-white hover:bg-primary/90 border-primary" 
-                : "bg-orange-500 text-white hover:bg-orange-600 backdrop-blur-sm border-orange-400"
-            )}
-          >
-            <LogIn className="h-4 w-4" />
-            Inicio de sesión
-          </Button>
         </nav>
+
+        {/* Login Button */}
+        <Button
+          variant="outline"
+          size="sm"
+          className={cn(
+            "hidden md:flex items-center gap-2 transition-all",
+            isScrolled 
+              ? "bg-primary text-white hover:bg-primary/90 border-primary" 
+              : "bg-red-600 text-white hover:bg-red-700 backdrop-blur-sm border-red-500"
+          )}
+        >
+          <LogIn className="h-4 w-4" />
+          Ingresar
+        </Button>
 
         {/* Mobile Menu Button */}
         <button 
@@ -97,20 +109,20 @@ const Header = () => {
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
          <div className="fixed inset-0 z-40 bg-gradient-to-b from-primary to-orange-500 pt-20 pb-6 px-4 animate-fade-in md:hidden">
-          <nav className="flex flex-col space-y-6">
-            {['Inicio', 'Noticias', 'Inscripciones', 'Asignaturas', 'Contacto'].map((item) => (
+          <nav className="flex flex-col space-y-4">
+            {menuItems.map((item) => (
               <a 
-                key={item} 
-                href={`#${item.toLowerCase()}`}
+                key={item.label} 
+                href={item.href}
                 className="text-white text-lg font-medium py-2 border-b border-white/30"
-                onClick={handleMenuItemClick} // Cerrar el menú y habilitar scroll
+                onClick={handleMenuItemClick}
               >
-                {item}
+                {item.label}
               </a>
             ))}
-            <Button className="flex items-center justify-center gap-2 w-full bg-orange-500 hover:bg-orange-600 text-white">
+            <Button className="flex items-center justify-center gap-2 w-full bg-red-600 hover:bg-red-700 text-white mt-4">
               <LogIn className="h-4 w-4" />
-              Inicio de sesión
+              Ingresar
             </Button>
           </nav>
         </div>
