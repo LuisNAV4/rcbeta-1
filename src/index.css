@@ -79,10 +79,52 @@
     font-feature-settings: "rlig" 1, "calt" 1;
     position: relative;
     min-height: 100vh;
-    background: linear-gradient(180deg, rgba(35, 70, 195, 0.15) 0%, rgba(255, 255, 255, 0.85) 100%);
+    background: linear-gradient(135deg, rgba(65, 105, 225, 0.2) 0%, rgba(255, 255, 255, 0.95) 100%);
     overflow-x: hidden;
   }
  
+  /* Enhanced background pattern */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      radial-gradient(circle at 70% 20%, rgba(65, 105, 225, 0.15) 0%, transparent 25%),
+      radial-gradient(circle at 20% 80%, rgba(65, 105, 225, 0.15) 0%, transparent 25%);
+    z-index: -2;
+    pointer-events: none;
+  }
+  
+  /* Decorative diagonal line */
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 12px;
+    background: linear-gradient(95deg, transparent, rgba(255, 165, 0, 0.6) 30%, rgba(218, 165, 32, 0.8) 50%, rgba(255, 165, 0, 0.6) 70%, transparent);
+    transform: rotate(-5deg) translateY(400px);
+    z-index: -1;
+    pointer-events: none;
+    animation: shine 8s infinite linear;
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.3);
+  }
+
+  @keyframes shine {
+    0% {
+      opacity: 0.7;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.7;
+    }
+  }
   
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold tracking-tight;
@@ -110,10 +152,40 @@
   
   .section-container {
     @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24;
+    position: relative;
+  }
+  
+  /* Enhanced section styling */
+  .section-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(2px);
+    border-radius: 1rem;
+    z-index: -1;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
   }
   
   .section-title {
     @apply text-3xl font-bold mb-2;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, rgba(65, 105, 225, 0.5), rgba(65, 105, 225, 0.8));
+    border-radius: 2px;
   }
   
   .section-subtitle {

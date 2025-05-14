@@ -11,7 +11,7 @@ interface SubjectCardProps {
 const SubjectCard = ({ icon: Icon, title, description, index }: SubjectCardProps) => {
   return (
     <div 
-      className="bg-white p-6 rounded-xl shadow-sm hover-card animate-fade-in opacity-0"
+      className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-sm hover-card animate-fade-in opacity-0"
       style={{ 
         animationDelay: `${100 + index * 100}ms`,
         animationFillMode: 'forwards'

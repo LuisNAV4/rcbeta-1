@@ -60,7 +60,7 @@ const NewsSection = () => {
   }, []);
 
   return (
-    <section id="noticias" className="bg-transparent relative" ref={sectionRef}>
+    <section id="noticias" className="bg-transparent relative backdrop-blur-sm py-6" ref={sectionRef}>
       <div className="section-container relative z-10">
         <div className={`text-center mb-12 transition-all duration-700 ${isInView ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
           <h2 className="section-title">Noticias y Eventos</h2>
@@ -71,7 +71,7 @@ const NewsSection = () => {
           {newsItems.map((item, index) => (
             <div 
               key={item.id} 
-              className="border border-primary/20 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all"
+              className="overflow-hidden shadow-md hover:shadow-lg transition-all rounded-xl border border-primary/20 bg-white/70 backdrop-blur-sm"
             >
               <NewsCard
                 image={item.image}

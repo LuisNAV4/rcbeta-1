@@ -1,10 +1,11 @@
+
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CalendarPlus, GraduationCap, BookOpen, Users, CheckCircle } from 'lucide-react';
 
 const EnrollSection = () => {
   return (
-    <section className="bg-transparent relative" id="inscripciones">
+    <section className="bg-transparent relative backdrop-blur-sm py-6" id="inscripciones">
       <div className="section-container relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <Badge variant="outline" className="mb-2 py-1.5 px-4 text-primary bg-primary/10 border-primary/20">
@@ -21,7 +22,7 @@ const EnrollSection = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
-          <div className="bg-white p-6 rounded-xl shadow-md border border-primary/10 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+          <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-md border border-primary/10 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
               <GraduationCap className="h-6 w-6 text-primary" />
             </div>
@@ -29,7 +30,7 @@ const EnrollSection = () => {
             <p className="text-gray-600 text-center">Nuestro programa educativo está diseñado para fomentar el pensamiento crítico y el desarrollo integral.</p>
           </div>
           
-          <div className="bg-white p-6 rounded-xl shadow-md border border-primary/10 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+          <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-md border border-primary/10 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
               <BookOpen className="h-6 w-6 text-primary" />
             </div>
@@ -37,7 +38,7 @@ const EnrollSection = () => {
             <p className="text-gray-600 text-center">Combinamos métodos tradicionales con las últimas innovaciones educativas para un aprendizaje efectivo.</p>
           </div>
           
-          <div className="bg-white p-6 rounded-xl shadow-md border border-primary/10 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+          <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-md border border-primary/10 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
               <Users className="h-6 w-6 text-primary" />
             </div>
@@ -47,7 +48,7 @@ const EnrollSection = () => {
         </div>
         
         <div className="max-w-2xl mx-auto">
-          <div className="bg-white p-8 rounded-xl shadow-lg border border-primary/20">
+          <div className="bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-primary/20">
             <h3 className="text-xl font-bold mb-4 text-center">Proceso de Inscripción</h3>
             
             <ul className="space-y-4 mb-6">
