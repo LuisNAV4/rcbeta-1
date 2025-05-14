@@ -34,7 +34,7 @@ const Header = () => {
         "fixed w-full top-0 z-50 transition-all duration-300 ease-in-out py-4 px-4 md:px-8",
         isScrolled 
           ? "bg-white/95 backdrop-blur-md shadow-sm" 
-          : "bg-gradient-to-b from-primary via-primary to-orange-500"
+          : "bg-gradient-to-b from-primary via-primary to-orange-500 shadow--lg"
       )}
     >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
