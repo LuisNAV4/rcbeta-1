@@ -1,4 +1,3 @@
-
 import { 
   MapPin, 
   Phone, 
@@ -15,7 +14,11 @@ const Footer = () => {
   
   return (
     <footer className="bg-foreground text-white" id="contacto">
-      <div className="section-container py-16">
+      <div className="section-container py-16 px-4 md:px-8">
+        {/* 
+          Agrega 'sm:pr-4' para un pequeño margen a la derecha en móviles.
+          Puedes ajustar el valor (por ejemplo, 'sm:pr-6') según lo necesites.
+        */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12">
           {/* About */}
           <div className="col-span-1 md:col-span-1 lg:col-span-2">
@@ -81,10 +84,12 @@ const Footer = () => {
                 <Phone className="mr-3 h-5 w-5 text-white shrink-0" />
                 <span className="text-white/80">+123 456 7890</span>
               </li>
-              <li className="flex items-center">
-                <Mail className="mr-3 h-5 w-5 text-white shrink-0" />
-                <span className="text-white/80">info@relampagocatatumbo.edu</span>
-              </li>
+<li className="flex items-center">
+  <Mail className="mr-3 h-5 w-5 text-white shrink-0" />
+  <span className="text-white/80 break-all sm:max-w-[180px]">
+    info@relampagocatatumbo.edu
+  </span>
+</li>
             </ul>
           </div>
         </div>

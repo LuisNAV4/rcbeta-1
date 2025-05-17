@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
@@ -29,7 +28,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-white px-4 sm:px-6">
-        <div className="text-center max-w-4xl mx-auto mb-16">
+        <div className="text-center max-w-4xl mx-auto mb-16 pt-28 md:pt-32">
           <span 
             className={cn(
               "inline-block px-3 py-1 text-sm font-medium bg-primary/90 backdrop-blur-sm rounded-full mb-6 transition-all duration-700",
@@ -55,9 +54,11 @@ const Hero = () => {
             )}
           >
             Formando líderes del mañana con valores, educación integral y excelencia académica en un ambiente inspirador.
+            
           </p>
           
           <div 
+          /* Inspiramos mentes curiosas: valores, crecimiento y calidad educativa. */
             className={cn(
               "flex flex-col sm:flex-row gap-4 justify-center transition-all duration-700 delay-300",
               isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
