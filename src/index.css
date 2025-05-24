@@ -36,7 +36,7 @@
 
     --radius: 0.75rem;
 
-    --orange-accent: #e09a00;
+    --orange-accent: #DBA400;
   }
 
   .dark {
@@ -89,36 +89,20 @@
   }
  
   /* Enhanced background pattern with more blue */
-  body::before {
-    content: '';
+  .background-pattern {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-      radial-gradient(circle at 70% 20%, rgba(65, 105, 225, 0.2) 0%, transparent 25%),
-      radial-gradient(circle at 20% 80%, rgba(65, 105, 225, 0.2) 0%, transparent 25%);
-    z-index: -2;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
     pointer-events: none;
+    background-image: url('https://www.transparenttextures.com/patterns/white-paper.png');
+    background-size: cover;
+    opacity: 0.5;
   }
   
   /* Thicker decorative diagonal line - increased height from 12px to 20px */
-  body::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 20px;
-    background: linear-gradient(95deg, transparent, rgba(255, 165, 0, 0.6) 30%, rgba(218, 165, 32, 0.8) 50%, rgba(255, 165, 0, 0.6) 70%, transparent);
-    transform: rotate(-5deg) translateY(400px);
-    z-index: -1;
-    pointer-events: none;
-    animation: shine 8s infinite linear;
-    box-shadow: 0 0 15px rgba(255, 166, 0, 0.658);
-  }
-
   @keyframes shine {
     0% {
       opacity: 0.7;
@@ -128,6 +112,39 @@
     }
     100% {
       opacity: 0.7;
+    }
+  }
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px; /* Increased height */
+    background: linear-gradient(135deg, rgba(40, 43, 255, 0.3) 0%, rgba(255, 255, 255, 0.95) 100%);
+    z-index: -1;
+    animation: shine 2s infinite;
+  }
+
+  /* Ola inferior */
+  .background-wave {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 220px;
+    z-index: -1;
+    pointer-events: none;
+  }
+  .background-wave svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  @media (max-width: 600px) {
+    .background-wave {
+      height: 110px;
     }
   }
   

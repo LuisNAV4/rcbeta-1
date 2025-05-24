@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { Menu, X, LogIn } from 'lucide-react';
 import { Button } from "./ui/button";
 import logoImage from "../images/logo-rc-png.ico";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -52,18 +53,24 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          {['Inicio', 'Noticias','Inscripciones', 'Asignaturas', 'Contacto'].map((item) => (
+          { [
+            { label: 'Inicio', id: 'inicio' },
+            { label: 'Noticias', id: 'noticias' },
+            { label: 'Inscribir', id: 'inscripciones' },
+            { label: 'Asignaturas', id: 'asignaturas' },
+            { label: 'Contacto', id: 'contacto' }
+          ].map((item) => (
             <a 
-              key={item} 
-              href={`#${item.toLowerCase()}`}
+              key={item.id} 
+              href={`#${item.id}`}
               className={cn(
                 "font-medium transition-all duration-300 ease-in-out relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:origin-center after:scale-x-0 after:transition-transform hover:after:scale-x-100",
                 isScrolled 
                   ? "text-foreground after:bg-primary" 
-                  : "text-white after:bg-[#e09a00]"
+                  : "text-white after:bg-[color:var(--orange-accent)]]"
               )}
             >
-              {item}
+              {item.label}
             </a>
           ))}
           {/* Login Button */}
@@ -76,9 +83,12 @@ const Header = () => {
                 ? "bg-primary text-white hover:bg-primary/90 border-primary" 
                 : "bg-[color:var(--orange-accent)] text-white hover:bg-[color:var(--orange-accent)]/90 border-[color:var(--orange-accent)]"
             )}
+            asChild
           >
-            <LogIn className="h-4 w-4" />
-            Inicio de sesión
+            <Link to="/login" className="flex items-center gap-2">
+              <LogIn className="h-4 w-4" />
+              Inicio de sesión
+            </Link>
           </Button>
         </nav>
 
@@ -127,19 +137,27 @@ const Header = () => {
               <X className="h-6 w-6 text-black" />
             </button>
             <nav className="flex flex-col space-y-6 mt-8">
-              {['Inicio', 'Noticias', 'Inscripciones', 'Asignaturas', 'Contacto'].map((item) => (
+              { [
+                { label: 'Inicio', id: 'inicio' },
+                { label: 'Noticias', id: 'noticias' },
+                { label: 'Inscribir', id: 'inscripciones' },
+                { label: 'Asignaturas', id: 'asignaturas' },
+                { label: 'Contacto', id: 'contacto' }
+              ].map((item) => (
                 <a 
-                  key={item} 
-                  href={`#${item.toLowerCase()}`}
+                  key={item.id} 
+                  href={`#${item.id}`}
                   className="text-primary text-lg font-medium py-2 border-b border-primary/20"
                   onClick={handleMenuItemClick}
                 >
-                  {item}
+                  {item.label}
                 </a>
               ))}
-              <Button className="flex items-center justify-center gap-2 w-full bg-[color:var(--orange-accent)] hover:bg-[color:var(--orange-accent)]/90 text-white">
-                <LogIn className="h-4 w-4" />
-                Inicio de sesión
+              <Button className="flex items-center justify-center gap-2 w-full bg-[color:var(--orange-accent)] hover:bg-[color:var(--orange-accent)]/90 text-white" asChild>
+                <Link to="/login" className="flex items-center gap-2">
+                  <LogIn className="h-4 w-4" />
+                  Inicio de sesión
+                </Link>
               </Button>
             </nav>
           </div>
