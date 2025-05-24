@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
 import { Menu, X, LogIn } from 'lucide-react';
@@ -39,8 +40,8 @@ const Header = () => {
         )}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <a 
-            href="/inicio" 
+          <Link 
+            to="/" 
             className={cn("flex items-center text-foreground font-bold text-lg space-x-2", isScrolled ? "text-foreground" : "text-white")}
           >
             <img 
@@ -49,7 +50,7 @@ const Header = () => {
               className="h-12 w-auto transition-all duration-300 ease-in-out hover:scale-125"
             />
             U.E.P El Relámpago del Catatumbo
-          </a>
+          </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
@@ -85,7 +86,7 @@ const Header = () => {
             )}
             asChild
           >
-            <Link to="/login" className="flex items-center gap-2">
+            <Link to="/login">
               <LogIn className="h-4 w-4" />
               Inicio de sesión
             </Link>
@@ -154,7 +155,7 @@ const Header = () => {
                 </a>
               ))}
               <Button className="flex items-center justify-center gap-2 w-full bg-[color:var(--orange-accent)] hover:bg-[color:var(--orange-accent)]/90 text-white" asChild>
-                <Link to="/login" className="flex items-center gap-2">
+                <Link to="/login" onClick={handleMenuItemClick}>
                   <LogIn className="h-4 w-4" />
                   Inicio de sesión
                 </Link>
