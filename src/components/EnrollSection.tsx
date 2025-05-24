@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CalendarPlus, GraduationCap, BookOpen, Users, CheckCircle } from 'lucide-react';
@@ -70,14 +69,23 @@ const EnrollSection = () => {
               </li>
             </ul>
             
-            <div className="text-center">
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-white px-4 py-3 md:px-8 md:py-6 text-base md:text-lg shadow-md hover:shadow-xl transition-all duration-300 w-full md:w-auto"
+            <div className="flex justify-center items-center text-center">
+              <a 
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href = "#/inscripcion";
+                }}
+                className="flex items-center text-white font-bold text-lg space-x-2"
               >
-                <CalendarPlus className="mr-2 h-5 w-5" />
-                Iniciar Proceso de Inscripción
-              </Button>
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-white px-4 py-3 md:px-8 md:py-6 text-base md:text-lg shadow-md hover:shadow-xl transition-all duration-300 w-full md:w-auto"
+                >
+                  <CalendarPlus className="mr-2 h-5 w-5" />
+                  Iniciar Proceso de Inscripción
+                </Button>
+              </a>
             </div>
           </div>
         </div>

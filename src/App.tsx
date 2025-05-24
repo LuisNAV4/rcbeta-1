@@ -6,6 +6,7 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
+import Inscripcion from "./pages/RegistroRepresentante";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" element={<Index />} />
             <Route path="/inicio" element={<Index />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/inscripcion" element={<Inscripcion />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </TooltipProvider>

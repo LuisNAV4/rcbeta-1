@@ -11,6 +11,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/" element={<App />} />
         <Route path="/inicio" element={<App />} />
         <Route path="/login" element={<App />} />
+        <Route path="/inscripcion" element={<App />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="/*" element={<App />} />
       </Routes>
