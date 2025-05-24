@@ -16,3 +16,4 @@ createRoot(document.getElementById("root")!).render(
       </Routes>
     </Router>
   )
+createRoot(document.getElementById("root")!).render(<App />)

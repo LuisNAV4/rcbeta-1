@@ -85,10 +85,17 @@ const Header = () => {
             )}
             asChild
           >
-            <Link to="/login" className="flex items-center gap-2">
+            <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href = "#/login";
+            }}
+            className="flex items-center text-white font-bold text-lg space-x-2"
+          >
               <LogIn className="h-4 w-4" />
               Inicio de sesión
-            </Link>
+            </a>
           </Button>
         </nav>
 
