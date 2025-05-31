@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Header from "@/components/Header";
+import Header from "@/components/HeaderLogin";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -12,6 +12,7 @@ const RegistroRepresentante = () => {
     direccion: "",
     nombreNino: "",
     edadNino: "",
+    gradonino: "",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -111,6 +112,21 @@ const RegistroRepresentante = () => {
                 type="number"
                 min={1}
                 value={form.edadNino}
+                onChange={handleChange}
+                required
+                className="bg-white/70 border-gray-300 focus:border-primary focus:ring-primary mt-1"
+              />
+            </div>
+                       <div>
+              <Label htmlFor="gradonino" className="text-primary font-medium">
+                Edad del niño
+              </Label>
+              <Input
+                id="gradonino"
+                name="gradonino"
+                type="text"
+                placeholder="Grado del niño (Si aplica)"
+                value={form.gradonino}
                 onChange={handleChange}
                 required
                 className="bg-white/70 border-gray-300 focus:border-primary focus:ring-primary mt-1"

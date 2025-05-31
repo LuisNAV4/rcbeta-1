@@ -12,6 +12,18 @@
   transition: box-shadow 0.2s;
 }
 
+/* Glass solo en pantallas >=600px */
+@media (max-width: 599px) {
+  .glass-window {
+    background: #fff;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-radius: 0;
+    border: none;
+  }
+}
+
 @media (min-width: 600px) {
   .glass-window {
     max-width: 600px;
