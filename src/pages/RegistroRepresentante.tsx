@@ -119,7 +119,7 @@ const RegistroRepresentante = () => {
             </div>
                        <div>
               <Label htmlFor="gradonino" className="text-primary font-medium">
-                Edad del niño
+                Ultimo grado cursado por el niño (Si aplica)
               </Label>
               <Input
                 id="gradonino"
@@ -128,7 +128,6 @@ const RegistroRepresentante = () => {
                 placeholder="Grado del niño (Si aplica)"
                 value={form.gradonino}
                 onChange={handleChange}
-                required
                 className="bg-white/70 border-gray-300 focus:border-primary focus:ring-primary mt-1"
               />
             </div>
